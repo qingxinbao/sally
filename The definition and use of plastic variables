@@ -1,0 +1,11 @@
+#include<stdio.h>
+void main()
+{
+	int a,b,c,d;
+	unsigned u;
+	a=5;b=-6;u=20;
+	c=a+u;
+	d=b+u;
+	printf("a+u=%d,b+u=%d\n",c,d);
+	printf("%d,%d,%d\n",sizeof(short),sizeof(int),sizeof(long));
+}
