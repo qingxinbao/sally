@@ -1,0 +1,27 @@
+#include<reg51.h>
+ void Delay(unsigned int i)
+{
+unsigned int j;
+for(;i>0;i--)
+for(j=0;j<125;j++)
+{;}
+}
+ 
+ void	main(void)
+ {
+  unsigned	char	i,k;
+ P1=0xff;
+ if(P1==0xfe)
+ {
+   k=P1;
+   P0=k;
+	 
+ for(i=0;i<8;i++)
+ {
+   Delay(500);
+  k=~k;					   
+  k=k<<1;
+  k=~k;
+  P0=k;
+  }}
+	}
