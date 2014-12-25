@@ -1,0 +1,9 @@
+function[t,st]=F2T(f,sf)
+df=f(2)-f(1);
+Fmx=(f(end)-f(1)+df);
+dt=1/Fmx;
+N=length(sf);
+T=dt*N;
+t=0:dt:T-dt;
+sff=fftshift(sf);
+st=Fmx*ifft(sff);
