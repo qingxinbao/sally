@@ -1,0 +1,11 @@
+dt=1e-6;
+T=3*1e-3;
+t=0:dt:T;
+input=2*cos(2*pi*1000*t);
+carrier=5*cos(2*pi*1e4*t);
+output=(2+0.5*input).*carrier;
+subplot(2,1,1);plot(t,output);xlabel('t/s');ylabel('调幅输出');
+noise=randn(size(t));
+r=output+noise;
+subplot(2,1,2);plot(t,r);
+xlabel('t/s');ylabel('调幅输出');
