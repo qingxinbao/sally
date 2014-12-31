@@ -1,0 +1,10 @@
+component counter32
+port(clr,fin,enabl : in std_logic;
+	 dout : out std_logic_vector(31 downto 0));
+end component;
+
+component reg32b
+port(lk:in std_logic;
+	 din:in std_logic_vector(31 downto 0);
+	 y:out std_logic_vector(31 downto 0));
+end component;
