@@ -1,0 +1,29 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity myplj is
+port(clk:in std_logic;
+	  clk1:in std_logic;
+	  s:in std_logic_vector(1 downto 0);
+ 	  ledout:out std_logic_vector(55 downto 0));
+end entity;
+
+architecture one of myplj is
+
+component div
+port(clk50:in std_logic;
+	 clk:out std_logic);
+end component;
+
+component ftctrl
+port(clkk : in std_logic;
+	 cnt_en,rst_cnt : out std_logic;
+	 load : out std_logic);
+end component;
+
+component choose4
+port(clk:in std_logic;
+     s:in std_logic_vector(1 downto 0);
+     ofin:out std_logic);
+end component;
