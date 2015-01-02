@@ -1,0 +1,15 @@
+#include<stdio.h>
+void main()
+{
+ char a,b,c;
+ a=’B’;b=’O’;c=’Y’;
+ putchar(a);putchar(b);putchar(c);putchar(‘\n’);
+}
+4.输出实数时的有效位数
+#include<stdio.h>
+void main()
+{
+ float x,y;
+ x=111111.111;y=222222.222;
+ printf(“%f\n”,x+y);
+}
