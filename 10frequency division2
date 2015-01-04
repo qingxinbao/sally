@@ -1,0 +1,17 @@
+architecture bhv of div10 is
+ 	signal s : std_logic;
+    signal c : std_logic_vector(3 downto 0);
+begin
+process(clk10,c)
+begin
+	if rising_edge(clk10) then
+	if (c="1001") then c<="0000"; 
+	else c<=c+1;
+	end if;
+	if (c="0101") then s<=not s;
+	elsif(c="0000") then s<=not s;
+	end if;
+	end if;
+end process;
+k<=s;
+end bhv;
